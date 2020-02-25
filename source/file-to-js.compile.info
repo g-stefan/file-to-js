@@ -1,0 +1,3 @@
+--exe file-to-js
+--use-path=source
+--use-project=xyo.static
