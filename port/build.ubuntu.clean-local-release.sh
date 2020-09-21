@@ -3,8 +3,6 @@
 # http://unlicense.org/
 # Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo "-> clean file-to-js"
+echo "-> clean-local-release file-to-js"
 
-rm -rf bin
-rm -rf build
-
+rm -rf release
