@@ -5,7 +5,7 @@ rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-echo -^> git-release-check file-to-js
+echo -^> github-release-check file-to-js
 
 set PROJECT=file-to-js
 if not exist source\%PROJECT%.version.ini echo Error - no version & exit 1
