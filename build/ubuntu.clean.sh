@@ -5,6 +5,6 @@
 
 echo "-> clean file-to-js"
 
-rm -rf bin
-rm -rf build
+rm -rf output
+rm -rf temp
 
