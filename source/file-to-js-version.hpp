@@ -17,7 +17,7 @@
 
 #ifndef XYO_RC
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace Version {
 		const char *version();
 		const char *build();

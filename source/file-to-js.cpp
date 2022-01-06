@@ -12,41 +12,43 @@
 #include <string.h>
 
 #include "xyo.hpp"
+#include "file-to-js.hpp"
 #include "file-to-js-copyright.hpp"
 #include "file-to-js-license.hpp"
+#ifndef FILE_TO_JS_NO_VERSION
 #include "file-to-js-version.hpp"
+#endif
 
-namespace Main {
+namespace FileToJS {
 
 	using namespace XYO;
 
-	class Application :
-		public virtual IMain {
-			XYO_DISALLOW_COPY_ASSIGN_MOVE(Application);
-		public:
-
-			inline Application() {};
-
-			void showUsage();
-			void showLicense();
-
-			int main(int cmdN, char *cmdS[]);
-	};
-
 	void Application::showUsage() {
 		printf("file-to-js - Convert file to JS source\n");
-		printf("version %s build %s [%s]\n", FileToJs::Version::version(), FileToJs::Version::build(), FileToJs::Version::datetime());
-		printf("%s\n\n", FileToJs::Copyright::fullCopyright());
+		showVersion();
+		printf("%s\n\n", FileToJS::Copyright::fullCopyright());
 
 		printf("%s",
 			"options:\n"
+			"    --usage             this info\n"
 			"    --license           show license\n"
+			"    --version           show version\n"
+			"    --file-in=file      input file\n"
+			"    --file-out=file     output file\n"
+			"    --touch=file        touch file if changed input file\n"
+			"    --append            append content\n"
 		);
 		printf("\n");
 	};
 
 	void Application::showLicense() {
-		printf("%s", FileToJs::License::content());
+		printf("%s", FileToJS::License::content());
+	};
+
+	void Application::showVersion() {
+#ifndef FILE_TO_JS_NO_VERSION
+		printf("version %s build %s [%s]\n", FileToJS::Version::version(), FileToJS::Version::build(), FileToJS::Version::datetime());
+#endif
 	};
 
 	int Application::main(int cmdN, char *cmdS[]) {
@@ -70,12 +72,16 @@ namespace Main {
 					optValue = String::substring(opt, optIndex + 1);
 					opt = String::substring(opt, 0, optIndex);
 				};
+				if (opt == "usage") {
+					showUsage();
+					return 0;
+				};
 				if (opt == "license") {
 					showLicense();
 					return 0;
 				};
-				if (opt == "usage") {
-					showUsage();
+				if (opt == "version") {
+					showVersion();
 					return 0;
 				};
 				if (opt == "name") {
@@ -150,4 +156,6 @@ namespace Main {
 
 };
 
-XYO_APPLICATION_MAIN_STD(Main::Application);
+#ifndef FILE_TO_JS_LIBRARY
+XYO_APPLICATION_MAIN_STD(FileToJS::Application);
+#endif

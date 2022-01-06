@@ -10,7 +10,7 @@
 #ifndef FILE_TO_JS_LICENSE_HPP
 #define FILE_TO_JS_LICENSE_HPP
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace License {
 		const char *content();
 		const char *shortContent();

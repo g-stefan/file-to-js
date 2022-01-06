@@ -9,7 +9,7 @@
 
 #include "file-to-js-copyright.hpp"
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace Copyright {
 
 		static const char *copyright_ = "Copyright (c) Grigore Stefan";

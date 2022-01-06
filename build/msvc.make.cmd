@@ -19,3 +19,4 @@ exit 1
 :cmdXDefined
 
 call :cmdX xyo-cc --mode=%ACTION% @build/source/file-to-js.compile
+call :cmdX xyo-cc --mode=%ACTION% @build/source/file-to-js.library.compile

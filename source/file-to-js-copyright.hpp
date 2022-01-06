@@ -18,7 +18,7 @@
 
 #ifndef XYO_RC
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace Copyright {
 		const char *copyright();
 		const char *publisher();

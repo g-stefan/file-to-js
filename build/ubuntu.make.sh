@@ -18,3 +18,4 @@ cmdX(){
 }
 
 cmdX xyo-cc --mode=$ACTION @build/source/file-to-js.compile
+cmdX xyo-cc --mode=$ACTION @build/source/file-to-js.library.compile

@@ -9,7 +9,7 @@
 
 #include "file-to-js-license.hpp"
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace License {
 
 		static const char *license_ =

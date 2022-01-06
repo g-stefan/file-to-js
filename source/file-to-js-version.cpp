@@ -9,7 +9,7 @@
 
 #include "file-to-js-version.hpp"
 
-namespace FileToJs {
+namespace FileToJS {
 	namespace Version {
 
 		static const char *version_ = "1.11.0";
