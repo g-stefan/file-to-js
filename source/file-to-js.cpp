@@ -16,7 +16,7 @@
 #include "file-to-js-copyright.hpp"
 #include "file-to-js-license.hpp"
 #ifndef FILE_TO_JS_NO_VERSION
-#include "file-to-js-version.hpp"
+#	include "file-to-js-version.hpp"
 #endif
 
 namespace FileToJS {
@@ -29,15 +29,14 @@ namespace FileToJS {
 		printf("%s\n\n", FileToJS::Copyright::fullCopyright());
 
 		printf("%s",
-			"options:\n"
-			"    --usage             this info\n"
-			"    --license           show license\n"
-			"    --version           show version\n"
-			"    --file-in=file      input file\n"
-			"    --file-out=file     output file\n"
-			"    --touch=file        touch file if changed input file\n"
-			"    --append            append content\n"
-		);
+		       "options:\n"
+		       "    --usage             this info\n"
+		       "    --license           show license\n"
+		       "    --version           show version\n"
+		       "    --file-in=file      input file\n"
+		       "    --file-out=file     output file\n"
+		       "    --touch=file        touch file if changed input file\n"
+		       "    --append            append content\n");
 		printf("\n");
 	};
 
@@ -68,7 +67,7 @@ namespace FileToJS {
 			if (StringCore::beginWith(cmdS[i], "--")) {
 				opt = &cmdS[i][2];
 				optValue = "";
-				if(String::indexOf(opt, "=", 0, optIndex)) {
+				if (String::indexOf(opt, "=", 0, optIndex)) {
 					optValue = String::substring(opt, optIndex + 1);
 					opt = String::substring(opt, 0, optIndex);
 				};
@@ -86,7 +85,7 @@ namespace FileToJS {
 				};
 				if (opt == "name") {
 					stringName = optValue;
-					if(stringName.length() == 0) {
+					if (stringName.length() == 0) {
 						printf("Error: name is empty\n");
 						return 1;
 					};
@@ -94,7 +93,7 @@ namespace FileToJS {
 				};
 				if (opt == "file-in") {
 					fileNameIn = optValue;
-					if(fileNameIn.length() == 0) {
+					if (fileNameIn.length() == 0) {
 						printf("Error: file-in is empty\n");
 						return 1;
 					};
@@ -102,7 +101,7 @@ namespace FileToJS {
 				};
 				if (opt == "file-out") {
 					fileNameOut = optValue;
-					if(fileNameOut.length() == 0) {
+					if (fileNameOut.length() == 0) {
 						printf("Error: file-out is empty\n");
 						return 1;
 					};
@@ -111,7 +110,7 @@ namespace FileToJS {
 				if (opt == "touch") {
 					isTouch = true;
 					touchFileName = optValue;
-					if(touchFileName.length() == 0) {
+					if (touchFileName.length() == 0) {
 						printf("Error: touch filename is empty\n");
 						return 1;
 					};
@@ -124,30 +123,30 @@ namespace FileToJS {
 			};
 		};
 
-		if(stringName.length() == 0 ||
-			fileNameIn.length() == 0 ||
-			fileNameOut.length() == 0) {
+		if (stringName.length() == 0 ||
+		    fileNameIn.length() == 0 ||
+		    fileNameOut.length() == 0) {
 			showUsage();
 			return 1;
 		};
 
-		if(isTouch) {
-			if(Shell::fileExists(touchFileName)) {
-				if(Shell::compareLastWriteTime(touchFileName, fileNameIn) >= 0) {
+		if (isTouch) {
+			if (Shell::fileExists(touchFileName)) {
+				if (Shell::compareLastWriteTime(touchFileName, fileNameIn) >= 0) {
 					return 0;
 				};
 			};
 		};
 
-		if(!Util::fileToJs(
-				stringName,
-				fileNameIn,
-				fileNameOut,
-				append)) {
+		if (!Util::fileToJs(
+		        stringName,
+		        fileNameIn,
+		        fileNameOut,
+		        append)) {
 			return 1;
 		};
 
-		if(isTouch) {
+		if (isTouch) {
 			Shell::touchIfExists(touchFileName);
 		};
 

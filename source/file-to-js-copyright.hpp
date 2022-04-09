@@ -10,11 +10,11 @@
 #ifndef FILE_TO_JS_COPYRIGHT_HPP
 #define FILE_TO_JS_COPYRIGHT_HPP
 
-#define FILE_TO_JS_COPYRIGHT            "Copyright (c) Grigore Stefan"
-#define FILE_TO_JS_PUBLISHER            "Grigore Stefan"
-#define FILE_TO_JS_COMPANY              FILE_TO_JS_PUBLISHER
-#define FILE_TO_JS_CONTACT              "g_stefan@yahoo.com"
-#define FILE_TO_JS_FULL_COPYRIGHT       FILE_TO_JS_COPYRIGHT " <" FILE_TO_JS_CONTACT ">"
+#define FILE_TO_JS_COPYRIGHT "Copyright (c) Grigore Stefan"
+#define FILE_TO_JS_PUBLISHER "Grigore Stefan"
+#define FILE_TO_JS_COMPANY FILE_TO_JS_PUBLISHER
+#define FILE_TO_JS_CONTACT "g_stefan@yahoo.com"
+#define FILE_TO_JS_FULL_COPYRIGHT FILE_TO_JS_COPYRIGHT " <" FILE_TO_JS_CONTACT ">"
 
 #ifndef XYO_RC
 
