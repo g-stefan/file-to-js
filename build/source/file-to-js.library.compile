@@ -1,7 +1,0 @@
---lib file-to-js
---def=FILE_TO_JS_LIBRARY
---src-hpp=source/file-to-js.hpp
---build-include
---no-default-include
---install-include-direct
---use-project=xyo.static

@@ -1,0 +1,11 @@
+// File to JS
+// Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+// SPDX-FileCopyrightText: 2022 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-License-Identifier: MIT
+
+#include <XYO/FileToJS.Application/Application.rh>
+#include <XYO/FileToJS.Application/Copyright.rh>
+#include <XYO/FileToJS.Application/Version.rh>
+
+XYO_APPLICATION_VERSION_INFO(XYO_FILETOJS_APPLICATION,"file-to-cs.exe","FileToJS - Convert file to JS source")
