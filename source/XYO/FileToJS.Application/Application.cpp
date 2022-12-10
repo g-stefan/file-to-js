@@ -15,7 +15,7 @@ namespace XYO::FileToJS::Application {
 	void Application::showUsage() {
 		printf("FileToJS - Convert file to JS source\n");
 		showVersion();
-		printf("%s\n\n", FileToJS::Application::Copyright::fullCopyright());
+		printf("%s\n\n", FileToJS::Application::Copyright::copyright());
 
 		printf("%s",
 		       "options:\n"
@@ -26,13 +26,12 @@ namespace XYO::FileToJS::Application {
 		       "    --file-in=file      input file\n"
 		       "    --file-out=file     output file\n"
 		       "    --touch=file        touch file if changed input file\n"
-		       "    --append            append content\n"
-		);
+		       "    --append            append content\n");
 		printf("\n");
 	};
 
 	void Application::showLicense() {
-		printf("%s%s", FileToJS::Application::License::licenseHeader(), FileToJS::Application::License::licenseBody());
+		printf("%s", FileToJS::Application::License::license());
 	};
 
 	void Application::showVersion() {
@@ -160,8 +159,8 @@ namespace XYO::FileToJS::Application {
 			};
 		};
 
-		if (!fileToJS(stringName,fileNameIn,fileNameOut,append)) {
-			return 1;			
+		if (!fileToJS(stringName, fileNameIn, fileNameOut, append)) {
+			return 1;
 		};
 
 		if (isTouch) {

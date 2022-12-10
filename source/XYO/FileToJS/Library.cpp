@@ -8,7 +8,7 @@
 
 namespace XYO::FileToJS {
 
-	bool fileToJS(const char *stringName,const char *fileNameIn, const char *fileNameOut,bool append) {
+	bool fileToJS(const char *stringName, const char *fileNameIn, const char *fileNameOut, bool append) {
 		FILE *input;
 		FILE *output;
 		uint8_t ch;

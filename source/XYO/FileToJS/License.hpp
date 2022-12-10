@@ -12,8 +12,7 @@
 #endif
 
 namespace XYO::FileToJS::License {
-	XYO_FILETOJS_EXPORT const char *licenseHeader();
-	XYO_FILETOJS_EXPORT const char *licenseBody();
+	XYO_FILETOJS_EXPORT const char *license();
 	XYO_FILETOJS_EXPORT const char *shortLicense();
 };
 

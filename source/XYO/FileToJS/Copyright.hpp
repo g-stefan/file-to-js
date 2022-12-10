@@ -16,7 +16,6 @@ namespace XYO::FileToJS::Copyright {
 	XYO_FILETOJS_EXPORT const char *publisher();
 	XYO_FILETOJS_EXPORT const char *company();
 	XYO_FILETOJS_EXPORT const char *contact();
-	XYO_FILETOJS_EXPORT const char *fullCopyright();
 };
 
 #endif
