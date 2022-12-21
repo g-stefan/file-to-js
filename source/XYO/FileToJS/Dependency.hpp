@@ -14,7 +14,7 @@
 // -- Export
 
 #ifndef XYO_FILETOJS_INTERNAL
-#	ifdef FILE_TO_JS_LIBRARY_INTERNAL
+#	ifdef FILE_TO_JS_INTERNAL
 #		define XYO_FILETOJS_INTERNAL
 #	endif
 #endif
