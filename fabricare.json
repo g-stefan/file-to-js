@@ -12,8 +12,7 @@
 				"dependency" : [
 					"xyo-system"
 				],
-				"versionName" : "file-to-js.library",
-				"noRelease" : true
+				"versionName" : "file-to-js.library"
 			},
 			{
 				"name" : "file-to-js.application",
@@ -27,8 +26,7 @@
 				"defines" : [
 					"XYO_FILETOJS_APPLICATION_LIBRARY"
 				],
-				"linkVersion" : "file-to-js",
-				"noRelease" : true
+				"linkVersion" : "file-to-js"
 			},
 			{
 				"name" : "file-to-js",
@@ -38,7 +36,9 @@
 				"sourcePath" : "XYO/FileToJS.Application",
 				"dependency" : [
 					"file-to-js"
-				]
+				],
+				"hasRelease" : true,
+				"githubRelease" : true
 			}
 		]
 	}
