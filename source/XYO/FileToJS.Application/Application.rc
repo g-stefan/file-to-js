@@ -9,3 +9,4 @@
 #include <XYO/FileToJS.Application/Version.rh>
 
 XYO_APPLICATION_VERSION_INFO(XYO_FILETOJS_APPLICATION,"file-to-cs.exe","FileToJS - Convert file to JS source")
+XYO_APPLICATION_MANIFEST("Application.manifest")
