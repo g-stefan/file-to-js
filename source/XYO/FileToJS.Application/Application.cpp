@@ -15,7 +15,7 @@ namespace XYO::FileToJS::Application {
 	void Application::showUsage() {
 		printf("FileToJS - Convert file to JS source\n");
 		showVersion();
-		printf("%s\n\n", FileToJS::Application::Copyright::copyright());
+		printf("%s\n\n", FileToJS::Application::Copyright::copyright().c_str());
 
 		printf("%s",
 		       "options:\n"
@@ -31,7 +31,7 @@ namespace XYO::FileToJS::Application {
 	};
 
 	void Application::showLicense() {
-		printf("%s", FileToJS::Application::License::license());
+		printf("%s", FileToJS::Application::License::license().c_str());
 	};
 
 	void Application::showVersion() {
@@ -151,7 +151,7 @@ namespace XYO::FileToJS::Application {
 			if (Shell::fileExists(fileNameOut)) {
 				if (Shell::compareLastWriteTime(fileNameIn, fileNameOut) <= 0) {
 					return 0;
-				};			
+				};
 			};
 		};
 

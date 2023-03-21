@@ -12,8 +12,8 @@
 #endif
 
 namespace XYO::FileToJS::License {
-	XYO_FILETOJS_EXPORT const char *license();
-	XYO_FILETOJS_EXPORT const char *shortLicense();
+	XYO_FILETOJS_EXPORT std::string license();
+	XYO_FILETOJS_EXPORT std::string shortLicense();
 };
 
 #endif
