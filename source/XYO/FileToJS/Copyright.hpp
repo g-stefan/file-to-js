@@ -12,10 +12,10 @@
 #endif
 
 namespace XYO::FileToJS::Copyright {
-	XYO_FILETOJS_EXPORT std::string copyright();
-	XYO_FILETOJS_EXPORT std::string publisher();
-	XYO_FILETOJS_EXPORT std::string company();
-	XYO_FILETOJS_EXPORT std::string contact();
+	XYO_FILETOJS_EXPORT const char *copyright();
+	XYO_FILETOJS_EXPORT const char *publisher();
+	XYO_FILETOJS_EXPORT const char *company();
+	XYO_FILETOJS_EXPORT const char *contact();
 };
 
 #endif
