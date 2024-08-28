@@ -5,7 +5,7 @@
 		"projects" : [
 			{
 				"name" : "file-to-js",
-				"make" : "lib",
+				"make" : "dll-or-lib",
 				"SPDX-License-Identifier": "MIT",
 				"sourcePath" : "XYO/FileToJS",
 				"dependency" : [
@@ -28,7 +28,7 @@
 			},
 			{
 				"name" : "file-to-js",
-				"make" : "exe.static",
+				"make" : "exe",
 				"SPDX-License-Identifier": "MIT",
 				"sourcePath" : "XYO/FileToJS.Application",
 				"dependency" : [
