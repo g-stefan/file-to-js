@@ -1,5 +1,6 @@
 {
 	"solution" : {
+		"namespace" : "xyo",
 		"name" : "file-to-js",
 		"type" : "xyo-cpp",
 		"projects" : [
@@ -14,17 +15,33 @@
 				"versionName" : "file-to-js.library"
 			},
 			{
-				"name" : "file-to-js.application",
+				"name": "file-to-js.static",
+				"make": "lib",
+				"category": "make",
+				"SPDX-License-Identifier": "MIT",
+				"sourcePath" : "XYO/FileToJS",
+				"dependency" : [
+					"xyo-system.static"
+				],
+				"dependencyDefines" : [
+					"XYO_FILETOJS_LIBRARY"
+				],
+				"linkVersion": "file-to-js.library",
+				"crt": "static"
+			},
+			{
+				"name" : "file-to-js.application.static",
 				"make" : "lib",
 				"SPDX-License-Identifier": "MIT",
 				"sourcePath" : "XYO/FileToJS.Application",
 				"dependency" : [
-					"file-to-js"
+					"file-to-js.static"
 				],
-				"defines" : [
+				"dependencyDefines" : [
 					"XYO_FILETOJS_APPLICATION_LIBRARY"
 				],
-				"linkVersion" : "file-to-js"
+				"linkVersion" : "file-to-js",
+				"crt": "static"
 			},
 			{
 				"name" : "file-to-js",

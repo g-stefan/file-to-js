@@ -23,7 +23,7 @@ namespace XYO::FileToJS::Application {
 		       "    --usage             this info\n"
 		       "    --license           show license\n"
 		       "    --version           show version\n"
-		       "    --name=name         string variable name\n"
+		       "    --name=name         variable name\n"
 		       "    --file-in=file      input file\n"
 		       "    --file-out=file     output file\n"
 		       "    --touch=file        touch file if changed input file\n"
@@ -51,7 +51,7 @@ namespace XYO::FileToJS::Application {
 		String optValue;
 		TDynamicArray<String> cmdLine;
 
-		String stringName;
+		String variableName;
 		String fileNameIn;
 		String fileNameOut;
 		bool append = false;
@@ -101,8 +101,8 @@ namespace XYO::FileToJS::Application {
 					return 0;
 				};
 				if (opt == "name") {
-					stringName = optValue;
-					if (stringName.length() == 0) {
+					variableName = optValue;
+					if (variableName.length() == 0) {
 						printf("Error: name is empty\n");
 						return 1;
 					};
@@ -143,7 +143,7 @@ namespace XYO::FileToJS::Application {
 
 		// ---
 
-		if ((stringName.length() == 0) ||
+		if ((variableName.length() == 0) ||
 		    fileNameIn.length() == 0 ||
 		    fileNameOut.length() == 0) {
 			showUsage();
@@ -158,7 +158,7 @@ namespace XYO::FileToJS::Application {
 			};
 		};
 
-		if (!fileToJS(stringName, fileNameIn, fileNameOut, append)) {
+		if (!fileToJS(variableName, fileNameIn, fileNameOut, append)) {
 			return 1;
 		};
 

@@ -13,7 +13,7 @@
 
 namespace XYO::FileToJS {
 
-	XYO_FILETOJS_EXPORT bool fileToJS(const char *stringName, const char *fileNameIn, const char *fileNameOut, bool append);
+	XYO_FILETOJS_EXPORT bool fileToJS(const char *variableName, const char *fileNameIn, const char *fileNameOut, bool append);
 
 };
 

@@ -8,7 +8,7 @@
 
 namespace XYO::FileToJS {
 
-	bool fileToJS(const char *stringName, const char *fileNameIn, const char *fileNameOut, bool append) {
+	bool fileToJS(const char *variableName, const char *fileNameIn, const char *fileNameOut, bool append) {
 		FILE *input;
 		FILE *output;
 		uint8_t ch;
@@ -19,7 +19,7 @@ namespace XYO::FileToJS {
 		if (input != nullptr) {
 			output = fopen(fileNameOut, append ? "ab" : "wb");
 			if (output != nullptr) {
-				fprintf(output, "var %s=[", stringName);
+				fprintf(output, "var %s=[", variableName);
 
 				ch = 0x00;
 				index = 0;
